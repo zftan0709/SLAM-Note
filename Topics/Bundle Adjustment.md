@@ -9,5 +9,5 @@ However, in reality, it is close to impossible for these 'bundle' of light rays 
 
 
 ## Reference
-[1] Y.Chen,Y.Chen,G.Wang. Bundle Adjustment Revisited. arxiv.org/abs/1912.03858  
-[2] Y.He,X.Gao,C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
+[1] Y.Chen, Y.Chen, G.Wang. Bundle Adjustment Revisited. arxiv.org/abs/1912.03858  
+[2] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
