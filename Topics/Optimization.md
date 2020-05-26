@@ -8,7 +8,7 @@ A more intuitive way of understanding the relationship of least square estimatio
 Therefore, it is important to understand the optimization process in graph-based SLAM.
 
   <img src="http://chart.googleapis.com/chart?cht=tx&chl= F(x)=\frac{1}{2}\sum_{i=1}^{m}(f_i(x))^2" style="border:none;">
-  From the equation above, the cost function, <img src="http://chart.googleapis.com/chart?cht=tx&chl= F(x)" style="border:none;"> consists of ***m*** residual functions <img src="http://chart.googleapis.com/chart?cht=tx&chl= F(x)=f_i(x)" style="border:none;">.
+  From the equation above, the cost function,<img src="http://chart.googleapis.com/chart?cht=tx&chl=F(x)" style="border:none;">consists of ***m*** residual functions<img src="http://chart.googleapis.com/chart?cht=tx&chl= F(x)=f_i(x)" style="border:none;">.
 
 
 ## Reference [1] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
