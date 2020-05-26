@@ -16,4 +16,5 @@ In order to do so, we will first perform a taylor expansion.
 
 <img src="http://chart.googleapis.com/chart?cht=tx&chl={F(x+\Delta{}x)=F(x)+J \Delta{}x + \frac{1}{2}\Delta{}x^TH\Delta{}x + ...}" style="border:none;">
 
-## Reference [1] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
+## Reference
+[1] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
