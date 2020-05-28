@@ -66,7 +66,13 @@ Cons:
 * Equation will diverge when calculated increment _**Δx**_ is too large. 
 
 ## Levenberg-Marquardt Algorithm
+Levenberg-Marquardt(LM) algorithm incorporates **Gauss-Newton algorithm** and **Damp method** to improve the original algorithm. As mentioned above, Gauss-Newton algorithm has less stability and accuracy when _**Δx**_ is too large. To solve the problem, LM algorithm introduces the concept of **Trust Region**. The trust region can be defined as the difference of first order approximation and actual increment in the original function. In other word, if the difference is small enough, we say that the first order approximation is in the trust region and is accurate enough. In contrary, if the difference is too large, the increment value is not in the trust region and the approximation range should be decrease.
 
+![LM1](./Images/optimization10.png)
+
+![LM2](./Images/optimization11.png)
+
+From the equation above, _**μI**_ is added as a penalty to the equation if the increment _**Δx**_ is too large. _**μ**_ is also known as the damping factor and _**I**_ is identity matrix. Now we know that we are trying to keep _**Δx**_ in the trust region, but how do we decide the value of the damping factor, _**μ**_?
 
 ## Reference
 [1] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
