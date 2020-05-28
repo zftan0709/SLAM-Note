@@ -12,11 +12,11 @@ Therefore, it is important to understand the optimization process in graph-based
 From the equation above, the cost function, _**F(x)**_ consists of _**m**_ residual functions _**f<sub>i</sub>(x)**_.
 The residual functions can be the difference between an predicted value and actual measurements.
 As mentioned before, we are seeking the optimum value of _**x**_ that will produce the lowest cost function.
-In order to do so, several options are available to solve this non-linear least square problem such as _**gradient descent**_, _**Newton's method**_, _**Gauss-Newton**_, and _**Levenberg-Marquardt algorithm**_.
+In order to do so, several options are available to solve this non-linear least square problem such as _**gradient descent**_, _**Newton's method**_, _**Gauss-Newton**_, and _**Levenberg-Marquardt algorithm**_. These methods calculate an increment/decrement, _**Δx**_ and updates the target variable _**x**_ until the cost function _**F(x)**_ becomes small enough or converge.
 
 ## Gradient Descent
-Similar to other methods mentioned above, gradient descent is an iterative method to solve non-linear least square problem. Just like the name suggests, this method search for a "direction" to minimize the cost function. A more intuitive way of visualizing it is to think of the gradient of the cost function as the opposite "direction" and incrementally adjust the target variables towards it until convergence occurs.
-First order Taylor expansion is first performed on the cost function.
+Similar to other methods mentioned above, gradient descent is an iterative method to solve non-linear least square problem. Just like the name suggests, this method search for a "direction" to minimize the cost function. A more intuitive way of visualizing it is to think of the gradient of the cost function as a "direction" and we want to incrementally adjust the target variables towards the opposite direction in each iteration until convergence occurs.
+To calculate the "direction", first order Taylor expansion is first performed on the cost function.
 
 ![First Order Taylor Expanded Cost Function](./Images/optimization2.png)
 
@@ -56,7 +56,18 @@ Next, partial derivation with respect to _**Δx**_ is performed and is set to ze
 
 ![Gauss-Newton4](./Images/optimization9.png)
 
-Finally, the equation _**HΔx=b**_ or known as the Normal equation is obtained.  
+Finally, the equation _**HΔx=b**_, also known as the Normal equation is obtained. 
+As we can see, the final equation is somewhat similar to the Newton's method with the difference being _**H**_ is approximated as _**J<sub>f</sub>J<sup>T</sup><sub>f</sub>**_. By doing so, expensive computation of the original _**H**_ can be avoided.
+However, this new way of approximating Hessian matrix does come with some setback.
+Calculated _**Δx**_ can be occasionally too large, thus leading to the approximation of the residual function using the first order Taylor expansion not close enough to the original function.
+This might cause instability and even divergence in the iterative process.
+
+Cons:
+* Equation will diverge when calculated increment _**Δx**_ is too large. 
+
+## Levenberg-Marquardt Algorithm
+
+
 ## Reference
 [1] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
 
