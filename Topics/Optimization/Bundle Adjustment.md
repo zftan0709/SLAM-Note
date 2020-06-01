@@ -4,9 +4,15 @@ Bundle Adjustment plays an important role in many modern computer vision applica
 In visual SLAM, it is often used to calculate the camera pose given detected feature points in each few frames.
 
 ![Bundle Adjustment Figure](./Images/bundle_adjustment1.png)
+
 In the figure above, we have feature points detected in a few camera frames. For each 3D feature points, 'bundle' of light rays are projected from optical center of camera frames through the corresponding feature points in pixel frame and intersects at the 3D coordinates.
 However, in reality, it is close to impossible for these 'bundle' of light rays to completely converge at one point due to noise in camera measurements. Therefore, iterative 'adjustment' is required to ensure all the rays can reach the optimal convergence.
 
+---
+
+TO BE CONTINUE
+
+---
 
 ## Reference
 [1] Y.Chen, Y.Chen, G.Wang. Bundle Adjustment Revisited. arxiv.org/abs/1912.03858  
