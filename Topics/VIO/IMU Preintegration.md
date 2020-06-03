@@ -51,7 +51,7 @@ To be used in optimization-based backend, we will still have to formulate the pr
 
 ![IMU11](./Images/IMUPreintegration11.png)
 
-For the rotation residual function, we are using quaternion to calculate the residual. For product of two quaternion to be zero, the imaginary part of the quaternion has to be zero.
+For the rotation residual function, we are using quaternion to calculate the residual. For product of two quaternion to be zero degree, it can be expressed as the equation below with the imaginary part of the quaternion to be zero and real part to be one.
 
 ![IMU12](./Images/IMUPreintegration12.png)
 
