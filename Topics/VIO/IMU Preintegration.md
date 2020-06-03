@@ -59,10 +59,15 @@ Therefore, the rotation residual function only consists of the imaginary values.
 
 ## Covariance Propagation
 
+TO BE CONTINUE
+
 ## Reference
 
-[1] Y.He, X.Gao, C.Kun. _Visual SLAM Online Course._ shenlanxueyuan.com/my/course/225
+[1] T.Qin, P.Li, S.Shen. _VINS-MONO: A Robust and Versatile Monocular Visual-Inertial State Estimator._ arxiv.org/abs/1708.03852
 
-[2] X.Gao, T.Zhao, Y.Liu, Q.Yan. _14 Lectures on Visual SLAM: From Theory to Practice._ github/gaoxiang12/slambook-en
+[2] C.Foster, L.Carlone, F.Dellaert, D.Scaramuzza. _On-Manifold Preintegration for Real-Time Visual-Inertial Odometry._ arxiv.org/abs/1512.02363
 
-[3] T.Qin, P.Li, S.Shen. _VINS-MONO: A Robust and Versatile Monocular Visual-Inertial State Estimator._ arxiv.org/abs/1708.03852
+[3] Y.He, X.Gao, C.Kun. _Visual SLAM Online Course._ shenlanxueyuan.com/my/course/225
+
+[4] X.Gao, T.Zhao, Y.Liu, Q.Yan. _14 Lectures on Visual SLAM: From Theory to Practice._ github/gaoxiang12/slambook-en
+
