@@ -27,13 +27,13 @@ Using these readings, we can then formulate the poses of _**b<sub>i</sub>**_ and
 The equations above describe the relationship between _**b<sub>i</sub>**_ and _**b<sub>j</sub>**_ with the help of IMU measurements.
 However, the equations rely on integration which requires _**b<sub>i</sub>**_.
 In other word, we will need to redo all the integrations again if _**b<sub>i</sub>**_ updates or changes.
-This is not realistic as IMU measurements can be as many as 200 per seconds and redoing 200 integrations whenever one of the poses change can be ridiculously expensive.
+This is not realistic as IMU measurements can be as many as 200 per seconds and redoing 200 times integrations whenever one of the poses change can be ridiculously expensive.
 Therefore, it is wiser to perform the integration only to determine the relative changes between frames due to IMU measurements.
 This is when IMU Preintegration comes into play. As we know that rotation pose of _**b<sub>i</sub>**_ and _**b<sub>j</sub>**_ can be formulated as
 
 ![IMU7](./Images/IMUPreintegration7.png)
 
-By subtituting this into previous equations, we can separate _**b<sub>i</sub><sup>w</sub>**_ term from the integration process. By doing so, the changeable variables in the integration process will only be the bias of gyroscope and accelerometer.
+By subtituting this into previous equations, we can separate _**b<sub>i</sub><sup>w</sub>**_ term from the integration process. By doing so, the pose variables will not be included in the integration process. Note that the bias of the gyroscope and accelerometer are still exist in the preintegration process.
 
 ![IMU8](./Images/IMUPreintegration8.png)
 
