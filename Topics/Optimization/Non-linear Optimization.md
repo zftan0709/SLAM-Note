@@ -12,7 +12,7 @@ Therefore, it is important to understand the optimization process in graph-based
 From the equation above, the cost function, _**F(x)**_ consists of _**m**_ residual functions _**f<sub>i</sub>(x)**_.
 The residual functions can be the difference between an predicted value and actual measurements.
 As mentioned before, we are seeking the optimum value of _**x**_ that will produce the lowest cost function.
-In order to do so, several options are available to solve this non-linear least square problem such as _**Steepest/gradient descent**_, _**Newton's method**_, _**Gauss-Newton**_, and _**Levenberg-Marquardt algorithm**_. These methods calculate an increment/decrement, _**Δx**_ and updates the target variable _**x**_ until the cost function _**F(x)**_ becomes small enough or converge.
+In order to do so, several options are available to solve this non-linear least square problem such as _**Steepest/gradient descent**_, _**Newton's method**_, _**Gauss-Newton**_, and _**Levenberg-Marquardt algorithm**_. These methods calculate an increment/decrement, _**Δx**_ and updates the target variable _**x**_ until the cost function _**F(x)**_ becomes small enough or converge. Note that the methods mentioned above do not guarantee to converge to global minimum and requires a decesnt initial values to successfully converge to local minimum solution. However, there are global solvers that uses convex relaxation and Lagrangian duality to achieve certifiable solution. These global methods will not be discussed in the following part.
 
 ## Steepest/Gradient Descent
 Similar to other methods mentioned above, gradient descent is an iterative method to solve non-linear least square problem. Just like the name suggests, this method search for a "direction" to minimize the cost function. A more intuitive way of visualizing it is to think of the gradient of the cost function as a "direction" and we want to incrementally adjust the target variables towards the opposite direction in each iteration until convergence occurs.
@@ -66,7 +66,7 @@ Cons:
 * Equation will diverge when calculated increment _**Δx**_ is too large. 
 
 ## Levenberg-Marquardt Algorithm
-Levenberg-Marquardt(LM) algorithm incorporates **Gauss-Newton algorithm** and **Damp method** to improve the original algorithm. As mentioned above, Gauss-Newton algorithm has less stability and accuracy when _**Δx**_ is too large. To solve the problem, LM algorithm introduces the concept of **Trust Region**. The trust region can be defined as the difference of first order approximation and actual increment in the original function. In other word, if the difference is small enough, we say that the first order approximation is in the trust region and is accurate enough. In contrary, if the difference is too large, the increment value is not in the trust region and the approximation range should be decrease.
+Levenberg-Marquardt(LM) algorithm incorporates **Gauss-Newton algorithm** and **Damp method** to improve the original algorithm. As mentioned above, Gauss-Newton algorithm has less stability and accuracy when _**Δx**_ is too large. To solve the problem, LM algorithm introduces the concept of **Trust Region**. The trust region mentioned here can be defined as the difference of first order approximation and actual increment in the original function. In other word, if the difference is small enough, we say that the first order approximation is in the trust region and is accurate enough. In contrary, if the difference is too large, the increment value is not in the trust region and the approximation range should be decrease.
 
 ![LM1](./Images/optimization10.png)
 
@@ -96,4 +96,6 @@ For instance, Marquardt's strategy looks like this.
 ## Reference
 [1] Y.He, X.Gao, C.Kun. Visual SLAM Online Course. shenlanxueyuan.com/my/course/225
 
-[2] X.Gao, T.Zhao, Y.Liu, Q. Yan. 14 Lectures on Visual SLAM: From Theory to Practice. github/gaoxiang12/slambook-en
+[2] G.Grisetti, T.Guadgnino, I.Aloise, M.Colosi, B.Corte, D.Schlegel. Least Squares Optimization: from Theory to Practice. arvix.org.abs/2002.11051
+
+[3] X.Gao, T.Zhao, Y.Liu, Q. Yan. 14 Lectures on Visual SLAM: From Theory to Practice. github/gaoxiang12/slambook-en
