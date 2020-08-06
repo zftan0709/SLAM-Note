@@ -42,7 +42,7 @@ By subtituting this into previous equations, we can separate _**b<sub>i</sub><su
 ![IMU10](./Images/IMUPreintegration10.png)
 
 From the equations above, the preintegration terms, _**α**_, _**β**_, and _**γ**_ can then be calculated.
-A more intuitive way of understanding the preintegration terms is that they are the changes in translation, velocity, and rotation between two frames.
+A more intuitive way of understanding the preintegration terms is that they are the relative translation, velocity, and rotation between two frames.
 It is very useful to formulate as such in optimization-based backend as the preintegration can be used as constraint between poses.
 Note that the bias is assumed to be unchanged between two frames.
 
